@@ -12,3 +12,5 @@ CREATE TABLE messages (id text);
 INSERT INTO messages VALUES('hello world');
 SELECT * FROM messages;
 
+3. Change Password
+grant all on *.* to 'root'@'%' identified by 'password' with grant option;
