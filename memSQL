@@ -1,0 +1,14 @@
+1. memSQL Install
+docker run --rm --net=host memsql/quickstart check-system
+docker run -d --name memsql-container -p 3306:3306 -p 9000:9000 memsql/quickstart 
+docker exec -it memsql-container memsql
+
+2. Create Test DB 
+
+CREATE DATABASE quickstart;
+USE quickstart;
+CREATE TABLE messages (id text);
+
+INSERT INTO messages VALUES('hello world');
+SELECT * FROM messages;
+
